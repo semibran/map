@@ -1,0 +1,18 @@
+{
+ "name": "map",
+ "version": "1.0.0",
+ "description": "Fast and functional key-value maps",
+ "keywords": [
+  "map",
+  "key",
+  "value",
+  "functional"
+ ],
+ "main": "index.js",
+ "license": "MIT",
+ "author": "Brandon Semilla (https://github.com/semibran)",
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/semibran/map.git"
+ }
+}
