@@ -1,14 +1,14 @@
-# map
+# associate
 > Fast and functional key-value maps
 
 ## install
 ```sh
-npm install semibran/map
+npm install associate
 ```
 
 ## usage
 ```js
-const { get, set, has, remove, clear } = require('map')
+const { get, set, has, remove, clear } = require('associate')
 ```
 A map is any object with the fields `keys` and `values`, both of which are arrays.
 
