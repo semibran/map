@@ -1,7 +1,7 @@
 {
  "name": "associate",
  "version": "0.1.0",
- "description": "Fast and functional key-value maps",
+ "description": "Lightweight and context-free key-value maps",
  "keywords": [
   "map",
   "key",

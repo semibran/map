@@ -1,5 +1,5 @@
 # associate
-> Fast and functional key-value maps
+> Lightweight and context-free key-value maps
 
 ## install
 ```sh
