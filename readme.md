@@ -10,7 +10,7 @@ Objects in JavaScript have been traditionally used as [associative arrays](https
 > [3, 42] in map
 true
 ```
-This kind of type coercion can be considered somewhat useful for arrays, which happen to be the closest native JavaScript can get to actual tuples. However, it turns out to be practically useless when applied to other kinds of objects.
+This kind of type coercion can be considered somewhat useful for arrays, which happen to be the closest that native JavaScript can get to actual tuples. However, it turns out to be practically useless when applied to other kinds of objects.
 ```js
 > map[{ object: 'with', stuff }] = 'big rip'
 > map
@@ -31,8 +31,8 @@ Feel free to move on ahead if neither of these drawbacks apply to you, but I wan
 In this module, a map is any object with the fields `keys` and `values`, both of which are arrays.
 ```js
 var map = {
-  keys: ['foo', { x: 3, y: 42 }],
-  values: ['bar', 1]
+  keys: ['foo', [3, 42]],
+  values: ['bar', 'dragons']
 }
 ```
 These two arrays are correlated ("associated") by index; e.g. `map.keys[0]` corresponds to `map.values[0]`.
