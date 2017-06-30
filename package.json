@@ -1,6 +1,6 @@
 {
  "name": "associate",
- "version": "0.1.0",
+ "version": "0.2.0",
  "description": "Lightweight and context-free key-value maps",
  "keywords": ["associate", "map", "key", "value"],
  "files": ["index.js", "get.js", "set.js", "has.js", "clear.js"],
