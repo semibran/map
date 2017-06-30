@@ -1,6 +1,30 @@
 # associate
 > Lightweight and context-free key-value maps
 
+Objects in JavaScript have been traditionally used as [associative arrays](https://en.wikipedia.org/wiki/Associative_array) to associate keys with values. Unfortunately, these kinds of object maps can only handle keys whose types are [primitive values](https://www.ecma-international.org/ecma-262/5.1/#sec-4.3.2). Any other kinds of values will be automatically converted into a string via `.toString()`.
+```js
+> map[[3, 42]] = 'dragons' // here be dragons!
+> map
+{ '3,42': 'dragons' }
+
+> [3, 42] in map
+true
+```
+This kind of type coercion can be considered somewhat useful for arrays, which happen to be the closest native JavaScript can get to actual tuples. However, it turns out to be practically useless when applied to other kinds of objects.
+```js
+> map[{ object: 'with', stuff }] = 'big rip'
+> map
+{ '[object Object]': 'big rip' }
+```
+To address this issue, ES6 introduced the [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object, which removes the limit on what types of keys can be used.
+
+But using the `Map` constructor doesn't just break backwards compatibility -  it also suffers from the fact that `Map` instances can't be serialized to JSON.
+```js
+> JSON.stringify(new Map())
+'{}'
+```
+Feel free to move on ahead if neither of these drawbacks apply to you, but I wanted to try my hand at creating a fast and serializable model for associative arrays based strictly on primitives instead of constructors. This module is what I came up with. :tada:
+
 ## usage
 [![NPM](https://nodei.co/npm/associate.png?mini)](https://www.npmjs.com/package/associate)
 
