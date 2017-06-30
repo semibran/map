@@ -2,17 +2,9 @@
  "name": "associate",
  "version": "0.1.0",
  "description": "Lightweight and context-free key-value maps",
- "keywords": [
-  "map",
-  "key",
-  "value",
-  "functional"
- ],
- "main": "index.js",
+ "keywords": ["associate", "map", "key", "value"],
+ "files": ["index.js", "get.js", "set.js", "has.js", "clear.js"],
  "license": "MIT",
  "author": "Brandon Semilla (https://github.com/semibran)",
- "repository": {
-  "type": "git",
-  "url": "https://github.com/semibran/map.git"
- }
+ "repository": "semibran/map"
 }
